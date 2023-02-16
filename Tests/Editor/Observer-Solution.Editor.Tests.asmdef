@@ -1,0 +1,12 @@
+{
+  "name": "Observer-Solution.Editor.Tests",
+  "optionalUnityReferences": [
+    "TestAssemblies"
+  ],
+  "includePlatforms": [
+    "Editor"
+  ],
+  "references": [
+    "Observer-Solution"
+  ]
+}

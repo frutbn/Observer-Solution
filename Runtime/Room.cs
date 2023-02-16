@@ -1,0 +1,1 @@
+public delegate void Room<in T>(T obj);
