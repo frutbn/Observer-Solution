@@ -1,4 +1,6 @@
-public interface IChannel<T> where T : IMessage
+using System;
+
+public interface IChannel<T> : IDisposable where T : IMessage
 {
     public bool TryAddListener(Room<T> room);
     public bool TryRemoveListener(Room<T> room);

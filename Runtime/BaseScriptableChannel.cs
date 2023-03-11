@@ -19,4 +19,9 @@ public abstract class BaseScriptableChannel<T> : ScriptableObject, IChannel<T> w
     {
         foreach (var room in _rooms) room.Invoke(message);
     }
+    
+    public void Dispose()
+    {
+        _rooms.Clear();
+    }
 }
