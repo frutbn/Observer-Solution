@@ -1,5 +1,3 @@
-using UnityEngine;
-
-public abstract class BaseChannelGroup : ScriptableObject
+public abstract class BaseChannelGroup
 {
 }
