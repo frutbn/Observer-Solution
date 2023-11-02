@@ -20,14 +20,12 @@ public static class ObserverSolutionUtilities
             .Where(type => !type.IsClass && !type.IsInterface && interfaceMessageType.IsAssignableFrom(type));
     }
 
-    public static IEnumerable<Type> GetGenericChannelTypes()
+    public static IEnumerable<Type> MakeGenericChannelTypes(Type channelType)
     {
-        var genericChannelType = typeof(Channel<>);
         var messageTypes = GetDerivedMessageTypes();
         foreach (var messageType in messageTypes)
         {
-            var channelType = genericChannelType.MakeGenericType(messageType);
-            yield return channelType;
+            yield return channelType.MakeGenericType(messageType);
         }
     }
 }
